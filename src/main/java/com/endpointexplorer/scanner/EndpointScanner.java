@@ -3,6 +3,7 @@ package com.endpointexplorer.scanner;
 import com.endpointexplorer.model.ControllerNode;
 import com.endpointexplorer.model.EndpointData;
 import com.endpointexplorer.settings.EndpointExplorerSettings;
+import com.intellij.openapi.application.ReadAction;
 import com.intellij.openapi.fileTypes.FileType;
 import com.intellij.openapi.fileTypes.FileTypeManager;
 import com.intellij.openapi.progress.ProgressIndicator;
