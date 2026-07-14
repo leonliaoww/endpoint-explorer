@@ -1,0 +1,44 @@
+<idea-plugin>
+    <id>com.endpointexplorer.plugin</id>
+    <name>Spring Boot Endpoint Explorer</name>
+    <version>1.0.0</version>
+    <vendor>Individual Developer</vendor>
+
+    <description><![CDATA[
+        <h2>Spring Boot API Endpoint Explorer</h2>
+        <p>Scans Spring Boot projects and displays all REST API endpoints in a dedicated tool window.</p>
+        <h3>Features:</h3>
+        <ul>
+            <li>✅ Scans @RestController / @Controller annotated classes</li>
+            <li>✅ Groups endpoints by controller with base path</li>
+            <li>✅ Shows HTTP method badges (GET=🟢, POST=🔵, PUT=🟠, DELETE=🔴, PATCH=🟣)</li>
+            <li>✅ Displays request parameters, path variables, request body, and return types</li>
+            <li>✅ Double-click to navigate directly to the endpoint source code</li>
+            <li>✅ Auto-detects @RequestMapping on both class and method level</li>
+            <li>✅ Real-time refresh button</li>
+        </ul>
+    ]]></description>
+
+    <change-notes><![CDATA[
+        <h3>v1.0.0</h3>
+        <ul>
+            <li>Initial release</li>
+            <li>Endpoint scanning and display</li>
+            <li>Source code navigation</li>
+        </ul>
+    ]]></change-notes>
+
+    <depends>com.intellij.modules.platform</depends>
+    <depends>com.intellij.modules.java</depends>
+
+    <extensions defaultExtensionNs="com.intellij">
+        <applicationService serviceImplementation="com.endpointexplorer.settings.EndpointExplorerSettings"/>
+
+        <toolWindow
+            id="Spring Endpoints"
+            icon="AllIcons.Toolwindows.WebToolWindow"
+            anchor="right"
+            factoryClass="com.endpointexplorer.toolwindow.EndpointToolWindowFactory"
+        />
+    </extensions>
+</idea-plugin>
