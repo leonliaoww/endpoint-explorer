@@ -4,7 +4,7 @@ plugins {
 }
 
 group = "com.endpointexplorer"
-version = "1.0.0"
+version = "1.0.1"
 
 repositories {
     mavenCentral()
@@ -29,8 +29,8 @@ tasks.withType<JavaCompile> {
 
 tasks {
     patchPluginXml {
-        sinceBuild.set("211")
-        untilBuild.set("213.*")
+        sinceBuild.set("193")
+        untilBuild.set("243.*")
     }
 
     buildSearchableOptions {
